@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+#panel {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    min-width: 150px;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropdown-header {
+    padding: 8px 12px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.dropdown-header:hover {
+    background: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    margin-top: 5px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.dropdown-button {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    margin: 2px 0;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+}
+
+.dropdown-button:hover {
+    background: #e0e0e0;
+}
+
+#coordinates {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: monospace;
+    pointer-events: none;
+    white-space: nowrap;
+    display: none;
+}
+
+#coordinates.visible {
+    display: block;
+}
+
+.corner-label {
+    position: absolute;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: monospace;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.coord-input {
+    width: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    border: 1px solid #666;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: monospace;
+    font-size: 12px;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.coord-input:focus {
+    outline: 2px solid #4CAF50;
+    background: white;
+}
+
+#floatProperties {
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 12px;
+    display: none;
+}
+
+#floatProperties.visible {
+    display: block;
+}
+
+#floatProperties h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+#floatProperties .property {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#floatProperties .property-label {
+    font-weight: bold;
+    color: #666;
+}
+
+#floatProperties .property-value {
+    color: #333;
+}
+
+#bargeProperties {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 12px;
+}
+
+#bargeProperties h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+#bargeProperties .property {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#bargeProperties .property-label {
+    font-weight: bold;
+    color: #666;
+}
+
+#bargeProperties .property-value {
+    color: #333;
+}
+
+.property-input {
+    width: 80px;
+    padding: 2px 4px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    font-size: 12px;
+    text-align: right;
+}
+
+.property-input:focus {
+    outline: 2px solid #4CAF50;
+}
+
+#axesHelper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+}

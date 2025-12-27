@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Cube Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="axesHelper"></div>
+    <div id="floatProperties">
+        <h3>Float Properties</h3>
+        <div class="property">
+            <span class="property-label">Float ID:</span>
+            <span class="property-value" id="floatId">-</span>
+        </div>
+        <div class="property">
+            <span class="property-label">Length:</span>
+            <input type="number" class="property-input" id="floatLength" step="0.1"> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Width:</span>
+            <input type="number" class="property-input" id="floatWidth" step="0.1"> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Height:</span>
+            <input type="number" class="property-input" id="floatHeight" step="0.1"> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Weight:</span>
+            <input type="number" class="property-input" id="floatWeight" step="100"> lbs
+        </div>
+        <div class="property">
+            <span class="property-label">Draft:</span>
+            <span class="property-value" id="floatDraft">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Position X:</span>
+            <input type="number" class="property-input" id="floatPosX" step="0.1"> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Position Y:</span>
+            <input type="number" class="property-input" id="floatPosY" step="0.1"> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Position Z:</span>
+            <input type="number" class="property-input" id="floatPosZ" step="0.1"> ft
+        </div>
+    </div>
+    <div id="bargeProperties">
+        <h3>Barge Properties</h3>
+        <div class="property">
+            <span class="property-label">Total Floats:</span>
+            <span class="property-value" id="bargeTotalFloats">-</span>
+        </div>
+        <div class="property">
+            <span class="property-label">Total Items:</span>
+            <span class="property-value" id="bargeTotalItems">-</span>
+        </div>
+        <div class="property">
+            <span class="property-label">Area:</span>
+            <span class="property-value" id="bargeArea">-</span> ft²
+        </div>
+        <div class="property">
+            <span class="property-label">Draft:</span>
+            <span class="property-value" id="bargeDraft">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Barge Length (X):</span>
+            <span class="property-value" id="bargeLength">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Barge Width (Z):</span>
+            <span class="property-value" id="bargeWidth">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Center Flotation X:</span>
+            <span class="property-value" id="bargeCenterX">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Center Flotation Y:</span>
+            <span class="property-value" id="bargeCenterY">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Center Flotation Z:</span>
+            <span class="property-value" id="bargeCenterZ">-</span> ft
+        </div>
+        <div class="property">
+            <span class="property-label">Tilt X:</span>
+            <span class="property-value" id="bargeTiltX">-</span>°
+        </div>
+        <div class="property">
+            <span class="property-label">Tilt Z:</span>
+            <span class="property-value" id="bargeTiltZ">-</span>°
+        </div>
+    </div>
+    <div id="coordinates"></div>
+    <div id="panel">
+        <div class="dropdown">
+            <div class="dropdown-header" id="viewDropdown">View</div>
+            <div class="dropdown-content" id="viewContent">
+                <button class="dropdown-button" id="resetButton">Reset View</button>
+                <button class="dropdown-button" id="xzViewButton">XZ View (Top)</button>
+                <button class="dropdown-button" id="xyViewButton">XY View (Front)</button>
+                <button class="dropdown-button" id="yzViewButton">YZ View (Side)</button>
+                <button class="dropdown-button" id="toggleProjectionButton">Orthographic View</button>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div class="dropdown-header" id="buildDropdown">Build</div>
+            <div class="dropdown-content" id="buildContent">
+                <button class="dropdown-button" id="addItemButton">Add Item</button>
+                <button class="dropdown-button" id="addFloatButton">Add Float</button>
+            </div>
+        </div>
+    </div>
+    <div id="info">
+        <strong>Floating Cube Simulation</strong><br>
+        Large Cube: 20' × 10' × 7'<br>
+        Small Cube: 2' × 2' × 2'<br>
+        <br>
+        <em>Click and drag the small cube to move it<br>
+            Right-click drag to rotate view<br>
+            Scroll to zoom</em>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <!--<script>
+
+    </script> -->
+</body>
+
+</html>
